@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+
+    xmlns="http://www.springframework.org/schema/beans" 
+
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+
+    xmlns:p="http://www.springframework.org/schema/p" 
+
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+
+  
+
+<bean id="collection" class="com.pack.JavaCollection"> <!-- id acts as an object of the bean-->
+
+<property name="addressList">
+<list>
+<value>India</value>
+<value>China</value>
+<value>Japan</value>
+<value>Afghanistan</value>
+</list>
+</property>
+<property name="addressSet"> <!-- prints in random order and no duplicates -->
+<set>
+<value>diksha</value>
+<value>dikshajaiswal</value>
+<value>jaiswal</value>
+<value>apple</value>
+<value>diksha</value>
+</set>
+</property>
+<!-- setter injection using property tag -->
+<property name="addressMap"><!--  -->
+<map>
+<entry key="1" value="hello"></entry>
+<entry key="4" value="red"></entry>
+<entry key="3" value="blue"></entry>
+<entry key="2" value="green"></entry>
+</map>
+</property>
+
+<property name="addressProp"><!-- prints in random order -->
+<props>
+<prop key="one"> hello</prop>
+<prop key="two"> world</prop>
+<prop key="four"> red</prop>
+<prop key="three"> green</prop>
+</props>
+</property>
+
+</bean> 
+
+
+</beans> 
